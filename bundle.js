@@ -14,8 +14,8 @@ module.exports = Backbone.Model.extend({
   urlRoot: 'http://tiny-tiny.herokuapp.com/collections/babylambs',
   idAttribute: '_id',
   defaults: {
-    image: "http://ak-hdl.buzzfed.com/static/enhanced/terminal05/2012/9/13/16/enhanced-buzz-3104-1347566610-4.jpg",
-    caption: "We love baby lambs!",
+    image: "https://cdn3.iconfinder.com/data/icons/line/36/sheep-512.png",
+    caption: "baby lambs!",
     likes: 0,
   },
   initialize: function () {
@@ -30,11 +30,11 @@ var templates = require('./templates');
 var ItemModel = require('./itemModel');
 var ItemCollection = require('./itemCollection');
 
-  var itemCollection = new ItemCollection();
-
 $(document).ready(function (){
 
-page.init();
+  var itemCollection = new ItemCollection();
+  page.init();
+
 
 });
 
@@ -58,26 +58,12 @@ initEvents: function (){
     newLamb.save();
   });
 
+$('.likeme').on('click', function (){
+  var _id = $(this).data('id');
+
+});
 
 
-  //
-  // $('.likeme').on('click', function(event){
-  //            event.preventDefault();
-  //            id = $(this).attr('data-id');
-  //            thispic = itemCollection.get(id);
-  //            likesnow = thispic.attributes.likes;
-  //            likesnow.set({likes: likesnow+1});
-  //            thispic.save();
-  //
-  //          });
-
-    // $('body').on('click','.delete', function(el){
-    //                   el.preventDefault();
-    //                   id=$(this).attr('data-id');
-    //                   thispic = itemCollection.get(id);
-    //                   thispic.destroy();
-    //
-    //                 });
 },
 
 

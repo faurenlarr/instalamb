@@ -4,11 +4,11 @@ var templates = require('./templates');
 var ItemModel = require('./itemModel');
 var ItemCollection = require('./itemCollection');
 
-  var itemCollection = new ItemCollection();
-
 $(document).ready(function (){
 
-page.init();
+  var itemCollection = new ItemCollection();
+  page.init();
+
 
 });
 
@@ -32,26 +32,12 @@ initEvents: function (){
     newLamb.save();
   });
 
+$('.likeme').on('click', function (){
+  var _id = $(this).data('id');
+
+});
 
 
-  //
-  // $('.likeme').on('click', function(event){
-  //            event.preventDefault();
-  //            id = $(this).attr('data-id');
-  //            thispic = itemCollection.get(id);
-  //            likesnow = thispic.attributes.likes;
-  //            likesnow.set({likes: likesnow+1});
-  //            thispic.save();
-  //
-  //          });
-
-    // $('body').on('click','.delete', function(el){
-    //                   el.preventDefault();
-    //                   id=$(this).attr('data-id');
-    //                   thispic = itemCollection.get(id);
-    //                   thispic.destroy();
-    //
-    //                 });
 },
 
 
