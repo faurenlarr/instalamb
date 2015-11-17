@@ -55,24 +55,32 @@ initEvents: function (){
       caption:  $('.titleinput').val(),
 
     });
-
     newLamb.save();
   });
 
 
+
+  //
+  // $('.likeme').on('click', function(event){
+  //            event.preventDefault();
+  //            id = $(this).attr('data-id');
+  //            thispic = itemCollection.get(id);
+  //            likesnow = thispic.attributes.likes;
+  //            likesnow.set({likes: likesnow+1});
+  //            thispic.save();
+  //
+  //          });
+
+    // $('body').on('click','.delete', function(el){
+    //                   el.preventDefault();
+    //                   id=$(this).attr('data-id');
+    //                   thispic = itemCollection.get(id);
+    //                   thispic.destroy();
+    //
+    //                 });
 },
 
-//
-// appendNew: function (){
-//   var itemCollection = new ItemCollection();
-//   itemCollection.fetch().then(function (collectionData) {
-//     template = _.template(templates.images);
-//     var finallamb = template(lamb);
-//     $('.pic').append(finallamb);
-//   });
-//
-//
-// },
+
 loadPictures: function(){
   var itemCollection = new ItemCollection();
   itemCollection.fetch().then(function (collectionData) {
@@ -90,34 +98,20 @@ loadTemplate: function ($el, data, tmpl) {
           var html = template(data);
           $el.append(html);
 },
-  //get collectionData
-  //do a _.each
-  //append the templated html tothe page
 
 
-likes: function (){
 
-},
+
 
 
 
 
 initStyling: function () {
-$('body').prepend("<h1 class='title'>" + 'INSTA.LAMB' + "<h1>");
-// $('body').append(templates.imageInput);
-$('.pic').append(templates.likeButton);
-
+$('body').prepend("<h1 class='title'>" + 'INSTA' + '<img src="http://www.dormirei.com/fav.ico" class="babylamb"/>'  + 'LAMB' + "<h1>");
+$('body').append(templates.imageInput);
 page.loadPictures();
 
-
-
 },
-
-
-//
-// imageInput: function() {
-//   $('.pic').html(templates.imageInput);
-// }
 
 
 
@@ -12796,8 +12790,12 @@ module.exports = {
 images: [
 "<div class='pic'>",
 '<img src="<%= image %>"/>',
-"<button='type='submit' class='likeme'>" ,
- 'LIKE ME',
+"<h3><%=caption%></h3>",
+"<button data-id='<%=_id%>' 'type='submit' class='likeme'>" ,
+ 'LIKES: <%=likes%>',
+ "</button>",
+ "<button type='delete' class='delete'>",
+ 'DELETE',
  "</button>",
 "</div>",
 ].join(""),

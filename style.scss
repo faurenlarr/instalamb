@@ -27,16 +27,54 @@ body {
         height: 100%;
       }
 }
+.likeme{
+  background-color: #ff6562;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+ border: 1px solid rgb(45, 84, 91);
+ display: inline-block;
+
+}
+h3 {
+  font-size: 20px;
+  color: white;
+  display: inline-block;
+  float: right;
+}
 
 .urlinput{
   width: 35%;
   display: inline-block;
-  height: 25px;
+  height: 35px;
   margin-top: 30px;
+  font-size: 15px;
 }
 .titleinput {
   width: 35%;
   display: inline-block;
-  height: 25px;
+  height: 35px;
   margin-bottom: 50px;
+  font-size: 15px;
+
+}
+form {
+  width: 75%;
+  margin-left: 525px;
+}
+
+.submit {
+  display: block;
+    margin-top: -38px;
+    width: 10%;
+    margin-left: 137px;
+    height: 36px;
+    border-radius: 10px;
+    background-color: #ff6562;
+    border: 1px solid white;
+    color: white;
+    font-size: 15px;
+}
+.babylamb {
+  height: 100px;
 }
