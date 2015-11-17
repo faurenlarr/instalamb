@@ -1,0 +1,42 @@
+body {
+  // color: rgb(45, 84, 91);
+  background-color: #f9f2e5;
+}
+
+.title {
+  font-size: 50px;
+  font-family: 'Cabin';
+  text-align: center;
+  // text-shadow: 5px 5px 3px #cccccc;
+  //  -webkit-text-stroke: 2px rgb(45, 84, 91);
+     color: rgb(45, 84, 91);
+}
+
+.pic {
+  width: 350px;
+  height: 270px;
+  margin: 20px;
+  margin-left: 75px;
+  border: 10px solid rgb(45, 84, 91);
+  border-bottom: 50px solid rgb(45, 84, 91) ;
+  display: inline-block;
+
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+}
+
+.urlinput{
+  width: 35%;
+  display: inline-block;
+  height: 25px;
+  margin-top: 30px;
+}
+.titleinput {
+  width: 35%;
+  display: inline-block;
+  height: 25px;
+  margin-bottom: 50px;
+}
